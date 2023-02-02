@@ -78,8 +78,6 @@ echo fis=%fis%_LoRA%dim%.safetensors
 echo.
 echo Extraction:
 
-python.exe ./lib/extract_LoRA_from_models.py %v1_2% --save_precision %zip% --save_to %fis%_LoRA%dim%.safetensors --model_org %fi2% --model_tuned %Fi1% --dim %dim%
-
 if /I "%v2%" == "Y" (
     python.exe ./lib/extract_LoRA_from_models.py --save_precision %zip% --save_to %fis%_LoRA%dim%.safetensors --model_org %fi2% --model_tuned %Fi1% --dim %dim% --v2
 ) else (
